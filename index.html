@@ -62,7 +62,7 @@
             }
             
             document.getElementById("contador").innerHTML = 
-                `${anos} anos, ${meses} meses, ${dias} dias, ${segundos} segundos`;
+                `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
         }
         
         function dispararConfetti() {
@@ -86,8 +86,6 @@
                     requestAnimationFrame(frame);
                 }
             })();
-        }
-            });
         }
         
         setTimeout(dispararConfetti, 1000);
