@@ -47,6 +47,8 @@
             let meses = agora.getMonth() - dataCasamento.getMonth();
             let dias = agora.getDate() - dataCasamento.getDate();
             let segundos = Math.floor((agora - dataCasamento) / 1000) % 60;
+            let minutos = Math.floor((agora - dataCasamento) / (1000 * 60)) % 60;
+            let horas = Math.floor((agora - dataCasamento) / (1000 * 60 * 60)) % 24;
             
             if (meses < 0 || (meses === 0 && agora.getDate() < dataCasamento.getDate())) {
                 anos--;
