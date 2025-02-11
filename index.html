@@ -37,6 +37,7 @@
         <div id="contador"></div>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.0"></script>
     <script>
         function atualizarContador() {
             const dataCasamento = new Date("2018-09-23T15:00:00");
@@ -62,6 +63,15 @@
                 `${anos} anos, ${meses} meses, ${dias} dias, ${segundos} segundos`;
         }
         
+        function dispararConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+        
+        setTimeout(dispararConfetti, 1000);
         setInterval(atualizarContador, 1000);
         atualizarContador();
     </script>
